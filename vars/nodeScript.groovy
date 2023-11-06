@@ -1,5 +1,7 @@
 // MySharedLibrary.groovy
 def call() {
     def fileResource = libraryResource("index.js")
-    sh "echo ${fileResource}"
+    writeFile file: "index.js", text: fileResource
+    sh "ls"
+    sh "node index.js"
 }
