@@ -1,5 +1,12 @@
-def call(){
-    def gitCloneCommand = "git clone https://github.com/Raj-Patoliya/shared-libs.git ."
+// MySharedLibrary.groovy
+
+package com.example
+
+def cloneGitRepository(repositoryUrl, destination) {
+    def gitCloneCommand = "git clone ${repositoryUrl} ${destination}"
     def exitCode = gitCloneCommand.execute()
-    sh "ls -al"
+
+    if (exitCode != 0) {
+        error("Git clone failed with exit code $exitCode")
+    }
 }
