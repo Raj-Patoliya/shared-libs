@@ -1,8 +1,5 @@
 // MySharedLibrary.groovy
-
-package com.example
-
-def call(repositoryUrl, destination) {
+def call() {
     def gitCloneCommand = "git clone https://github.com/Raj-Patoliya/shared-libs.git ."
     def exitCode = gitCloneCommand.execute()
 
