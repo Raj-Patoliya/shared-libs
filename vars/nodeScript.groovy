@@ -1,6 +1,6 @@
 // MySharedLibrary.groovy
 def call() {
-    def fileFromLibrary = libraryResource("index.js")
+    def fileFromLibrary = libraryResource("resources/index.js")
    if (fileFromLibrary) {
         sh "cat ${fileFromLibrary}" 
         sh "ls"
