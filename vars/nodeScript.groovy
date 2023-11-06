@@ -2,7 +2,7 @@
 def call() {
     def fileFromLibrary = libraryResource("index.js")
    if (fileFromLibrary) {
-        sh "cp ${fileFromLibrary} ./" 
+        sh "cat ${fileFromLibrary}" 
         sh "ls"
         sh "node index.js"
     } else {
