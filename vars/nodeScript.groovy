@@ -1,9 +1,10 @@
 // MySharedLibrary.groovy
 def call() {
-    def gitCloneCommand = "git clone https://github.com/Raj-Patoliya/shared-libs.git ."
-    def exitCode = gitCloneCommand.execute()
-
-    if (exitCode != 0) {
-        error("Git clone failed with exit code $exitCode")
+    def fileFromLibrary = libraryResource("index.js")
+   if (fileFromLibrary) {
+        sh "cp ${fileFromLibrary} ./" 
+        sh "node index.js"
+    } else {
+        error("File 'index.js' not found in the shared library.")
     }
 }
