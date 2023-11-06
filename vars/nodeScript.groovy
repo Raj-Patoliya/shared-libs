@@ -1,4 +1,4 @@
 
 def call() {
-    def fileFromLibrary = libraryResource("resources/index.js")
+    def fileFromLibrary = libraryResource("index.js")
 }
