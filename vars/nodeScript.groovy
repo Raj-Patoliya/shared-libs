@@ -1,3 +1,3 @@
 def call(){
-    sh "node index.js"
+    sh "ls"
 }
