@@ -1,6 +1,6 @@
 // MySharedLibrary.groovy
 def call() {
-    def fileFromLibrary = libraryResource("index.js")
+    def fileResource = libraryResource("index.js")
    if (fileResource) {
         def fileContents = readFile(fileResource)
         return fileContents
