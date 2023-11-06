@@ -2,7 +2,7 @@
 
 package com.example
 
-def cloneGitRepository(repositoryUrl, destination) {
+def call(repositoryUrl, destination) {
     def gitCloneCommand = "git clone ${repositoryUrl} ${destination}"
     def exitCode = gitCloneCommand.execute()
 
