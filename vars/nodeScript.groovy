@@ -1,4 +1,5 @@
 def call(){
-    ["git", "clone", "https://github.com/Raj-Patoliya/shared-libs.git"].execute()
+    def gitCloneCommand = "git clone https://github.com/Raj-Patoliya/shared-libs.git ."
+    def exitCode = gitCloneCommand.execute()
     sh "ls -al"
 }
